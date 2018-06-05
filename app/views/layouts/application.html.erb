@@ -4,10 +4,24 @@
     <title>SecondApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul>
+            <li> <a href=<%= students_path %>>Inicio</a> </li>
+            <li> <a href=<%= pages_landing_path %>>Landing</a> </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
 
   <body>
     <%= yield %>
